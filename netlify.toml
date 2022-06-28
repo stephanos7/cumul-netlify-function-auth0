@@ -1,0 +1,10 @@
+[functions]
+  directory = "functions"
+
+[template.environment]
+  CUMUL_KEY="Add your cumul key"
+  CUMUL_TOKEN="Add your cumul token"
+  REACT_APP_AUTH0_DOMAIN="Add your auth0 domain"
+  REACT_APP_AUTH0_CLIENT_ID="Add your auth0 client id "
+  REACT_APP_BASE_URL="Add your base url"
+  REACT_APP_AUTH0_AUDIENCE="Add your audience"
