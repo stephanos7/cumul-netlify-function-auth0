@@ -4,6 +4,11 @@
 [build]
   command = "CI=false && npm run build"
 
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [template.environment]
   CUMUL_KEY="Add your cumul key"
   CUMUL_TOKEN="Add your cumul token"
