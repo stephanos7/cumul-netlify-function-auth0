@@ -4,14 +4,13 @@ import { fetchSSO } from "../function-invocations/fetchSSO";
 import { CumulioWrapper } from "../components/CumulWrapper";
 
 const Protected = () => {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
   const [keyToken, setKeyToken] = useState(null);
 
   const getDashboardCredentials = async () => {
     try {
       let accessToken = await getAccessTokenSilently({
         audience: process.env.REACT_APP_AUTH0_AUDIENCE,
-        scope: "update:current_user_metadata",
       });
       let pair = await fetchSSO(accessToken);
       setKeyToken(pair);
