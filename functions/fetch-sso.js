@@ -15,10 +15,10 @@ exports.handler = auth(async (event, context) => {
       type: "sso",
       expiry: "24 hours",
       inactivity_interval: "10 minutes",
-      username: "user1",
-      name: "Brad Lambda",
-      email: "bradlambda@cumul.io",
-      suborganization: "user1",
+      username: "exampleUser",
+      name: "Example User",
+      email: "example@app.com",
+      suborganization: "exampleUser",
       role: "viewer",
     });
   };
