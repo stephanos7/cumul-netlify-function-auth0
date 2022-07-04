@@ -9,7 +9,7 @@ exports.handler = auth(async (event, context) => {
     host: "https://api.cumul.io",
   });
 
-  const generateSSOtoken = async () => {
+  const generateSSOcredentials = async () => {
     return await client.create("authorization", {
       integration_id: "5d4bc6b9-3f45-48d2-a23f-1efe4ce224c4",
       type: "sso",
@@ -23,7 +23,7 @@ exports.handler = auth(async (event, context) => {
     });
   };
   try {
-    ssoResponse = await generateSSOtoken();
+    ssoResponse = await generateSSOcredentials();
   } catch (err) {
     console.log(err.message);
     return {
