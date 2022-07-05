@@ -22,7 +22,7 @@ const Protected = () => {
 
   useEffect(() => {
     getDashboardCredentials();
-  }, [getDashboardCredentials]);
+  }, []);
 
   if (isLoading) {
     return <div>Loading ...</div>;
