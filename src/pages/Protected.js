@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { fetchSSO } from "../function-invocations/fetchSSO";
 import { CumulioWrapper } from "../components/CumulWrapper";
+import { Navigate } from "react-router-dom";
 
 const Protected = () => {
   const { user, isAuthenticated, isLoading, getAccessTokenSilently } = useAuth0();
